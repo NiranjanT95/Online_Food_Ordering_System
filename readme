@@ -1,0 +1,5 @@
+# Welcome!
+
+## Seed instructions
+### to seed use 'python django shell'
+### then 'from apps.restaurants import seed'

@@ -16,10 +16,7 @@ class Retaurants(View):
             for key in required_keys:
                 if key not in request.GET:
                     raise Exception("Required Key "+key+" not present in the request")
-            veg_only = request.GET['veg_only']
-            costs = request.GET['costs']
-            cuisine_types = request.GET['cuisine_types']
-            cuisine_op = request.GET['cuisine_op']
+            veg_only,costs,cuisine_types, cuisine_op = request.GET['veg_only'], request.GET['costs'], request.GET['cuisine_types'],request.GET['cuisine_op']
             filters = {}
             if veg_only != '':
                 filters['veg_only'] = bool(int(veg_only))

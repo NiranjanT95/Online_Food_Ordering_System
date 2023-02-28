@@ -26,7 +26,7 @@ class Retaurants(View):
                 if cuisine_op == 'and':
                     filters['cuisine_types__contained_by'] = cuisine_types.split(',')
                 elif cuisine_op == 'or':
-                    filters['cuisine_types__contains'] = cuisine_types.split(',')
+                    filters['cuisine_types__overlap'] = cuisine_types.split(',')
             restaurants =[]
             for restaurant in Restaurant.objects.filter(**filters):
                 restaurants.append(RestaurantSerializer(restaurant).data)

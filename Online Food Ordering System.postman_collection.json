@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "49397559-2fec-43e0-a2df-f2566947ee81",
+		"name": "Online Food Ordering System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23551755"
+	},
+	"item": [
+		{
+			"name": "restaurants",
+			"item": [
+				{
+					"name": "get_restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/restaurants/?veg_only=0&costs=medium&cuisine_op=and&cuisine_types=Maharashtrian,north Indian",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"restaurants",
+								""
+							],
+							"query": [
+								{
+									"key": "veg_only",
+									"value": "0"
+								},
+								{
+									"key": "costs",
+									"value": "medium"
+								},
+								{
+									"key": "cuisine_op",
+									"value": "and"
+								},
+								{
+									"key": "cuisine_types",
+									"value": "Maharashtrian,north Indian"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_restaurants Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/restaurants/?veg_only=1&costs=medium,high&cuisine_op=or&cuisine_types=french,cuisine 1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"restaurants",
+								""
+							],
+							"query": [
+								{
+									"key": "veg_only",
+									"value": "1"
+								},
+								{
+									"key": "costs",
+									"value": "medium,high"
+								},
+								{
+									"key": "cuisine_op",
+									"value": "or"
+								},
+								{
+									"key": "cuisine_types",
+									"value": "french,cuisine 1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
